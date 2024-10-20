@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Image</title>
+</head>
+<body>
+    <h1>Update Image</h1>
+    <form action="/update/<%= image._id %>" method="post" enctype="multipart/form-data">
+        <label>Name:</label>
+        <input type="text" name="name" value="<%= image.name %>" required>
+        <br>
+        <label>Email:</label>
+        <input type="email" name="email" value="<%= image.email %>" required>
+        <br>
+        <label>Image:</label>
+        <input type="file" name="image" accept="image/*">
+        <br>
+        <button type="submit">Update</button>
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>
